@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Play – Wordle | CSci 130</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to main content</a>
+<header class="site-header">
+  <p class="brand">Wordle</p>
+  <nav aria-label="Main navigation">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="rules.html">Rules</a></li>
+      <li><a href="game.html" aria-current="page">Play</a></li>
+      <li><a href="leaderboard.html">Leaderboard</a></li>
+      <li><a href="creator.html">Creator</a></li>
+      <li id="auth-nav"><a href="login.html">Login / Register</a></li>
+    </ul>
+  </nav>
+</header>
+<main id="main">
+<h1>Play Wordle</h1>
+
+<section id="stats-panel" aria-labelledby="stats-title" hidden>
+  <h2 id="stats-title">Your statistics</h2>
+  <dl class="stats">
+    <div><dt>Cumulative score</dt><dd id="stat-score">0</dd></div>
+    <div><dt>Games played</dt><dd id="stat-played">0</dd></div>
+    <div><dt>Games won</dt><dd id="stat-won">0</dd></div>
+    <div><dt>Total time played</dt><dd id="stat-time">00:00:00</dd></div>
+  </dl>
+</section>
+<p id="guest-note" hidden>You are playing as a guest. <a href="login.html">Log in or register</a> to save your results.</p>
+
+<div class="game-info">
+  <p>Time: <strong id="timer">00:00:00</strong></p>
+  <p>Points if solved on this guess: <strong id="opportunity">1024</strong></p>
+  <button id="new-game" type="button">New game</button>
+</div>
+
+<p id="status" class="status" role="status" aria-live="polite">Loading word list…</p>
+
+<div id="board" role="grid" aria-label="Wordle board, six rows of five letters"></div>
+<div id="keyboard" aria-label="On-screen keyboard"></div>
+
+<section id="summary" tabindex="-1" aria-labelledby="summary-title" hidden>
+  <h2 id="summary-title">Game over</h2>
+  <p id="sum-result"></p>
+  <dl class="stats">
+    <div><dt>The word was</dt><dd id="sum-word"></dd></div>
+    <div><dt>Points earned</dt><dd id="sum-points"></dd></div>
+    <div><dt>Elapsed time</dt><dd id="sum-time"></dd></div>
+  </dl>
+  <p id="sum-save"></p>
+  <button id="new-game-2" type="button">New game</button>
+</section>
+</main>
+<footer class="site-footer">
+  <p>CSci 130 Web Programming – Fall 2026 · Wordle group project</p>
+</footer>
+<script src="js/wordle-logic.js"></script>
+<script src="js/common.js"></script>
+<script src="js/game.js"></script>
+</body>
+</html>
