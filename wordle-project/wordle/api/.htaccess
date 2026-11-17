@@ -1,0 +1,4 @@
+# Send every /api/... request that is not a real file to the PHP front controller.
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^ index.php [QSA,L]

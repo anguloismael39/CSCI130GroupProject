@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Leaderboard – Wordle | CSci 130</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to main content</a>
+<header class="site-header">
+  <p class="brand">Wordle</p>
+  <nav aria-label="Main navigation">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="rules.html">Rules</a></li>
+      <li><a href="game.html">Play</a></li>
+      <li><a href="leaderboard.html" aria-current="page">Leaderboard</a></li>
+      <li><a href="creator.html">Creator</a></li>
+      <li id="auth-nav"><a href="login.html">Login / Register</a></li>
+    </ul>
+  </nav>
+</header>
+<main id="main">
+<h1>Leaderboard</h1>
+<p>Use the column buttons to sort. Select the same column again to reverse the order.</p>
+<p id="lb-status" class="status" role="status" aria-live="polite">Loading…</p>
+<div class="table-wrap">
+  <table id="leaderboard">
+    <caption>Player statistics</caption>
+    <thead>
+      <tr>
+        <th scope="col" data-sort="username" aria-sort="none"><button type="button">Player <span class="sort-indicator" aria-hidden="true"></span></button></th>
+        <th scope="col" data-sort="score" aria-sort="none"><button type="button">Score <span class="sort-indicator" aria-hidden="true"></span></button></th>
+        <th scope="col" data-sort="games_played" aria-sort="none"><button type="button">Games played <span class="sort-indicator" aria-hidden="true"></span></button></th>
+        <th scope="col" data-sort="total_time" aria-sort="none"><button type="button">Total time <span class="sort-indicator" aria-hidden="true"></span></button></th>
+        <th scope="col" data-sort="completed_games" aria-sort="none"><button type="button">Completed games <span class="sort-indicator" aria-hidden="true"></span></button></th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+</div>
+</main>
+<footer class="site-footer">
+  <p>CSci 130 Web Programming – Fall 2026 · Wordle group project</p>
+</footer>
+<script src="js/wordle-logic.js"></script>
+<script src="js/common.js"></script>
+<script src="js/leaderboard.js"></script>
+</body>
+</html>
